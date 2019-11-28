@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://jahleelw.github.io/"/>
-  <updated>2019-11-28T02:54:07.291Z</updated>
+  <updated>2019-11-28T10:10:35.399Z</updated>
   <id>https://jahleelw.github.io/</id>
   
   <author>
@@ -15,6 +15,34 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>树莓派hexo辛酸史</title>
+    <link href="https://jahleelw.github.io/2019/11/28/%E6%A0%91%E8%8E%93%E6%B4%BEhexo%E8%BE%9B%E9%85%B8%E5%8F%B2/"/>
+    <id>https://jahleelw.github.io/2019/11/28/%E6%A0%91%E8%8E%93%E6%B4%BEhexo%E8%BE%9B%E9%85%B8%E5%8F%B2/</id>
+    <published>2019-11-28T10:09:04.000Z</published>
+    <updated>2019-11-28T10:10:35.399Z</updated>
+    
+    <content type="html"><![CDATA[<h4 id="折腾不息，生命不止"><a href="#折腾不息，生命不止" class="headerlink" title="折腾不息，生命不止"></a>折腾不息，生命不止</h4><p>那天看见房间里的一角里面的那<del>寂寞的</del>吃灰的树莓派，于心不忍。</p><p>恰好那时听一个很牛逼的鹅厂师兄的讲座，说他有用hexo博客。</p><p>加上一个看到一个心动的博客介绍指导 <a href="https://www.simon96.online/2018/10/12/hexo-tutorial/" target="_blank" rel="noopener">遇见西门</a></p><p>我突然涌起一股想用这个卡片搭一个hexo博客的想法！（激情澎湃）</p><a id="more"></a><h4 id="树莓派系统与登录"><a href="#树莓派系统与登录" class="headerlink" title="树莓派系统与登录"></a>树莓派系统与登录</h4><p>之前曾经在树莓派上配置了一些文件自动拨号并作为一个无线路由，结果换了网络后再也连不上它了。</p><p>一开机就在那使劲拨号我也很绝望。。。只能重装系统了是吧。</p><p>装树莓派系统还是很多很多教程也比较容易的，<a href="https://blog.csdn.net/yzy_1996/article/details/82916940" target="_blank" rel="noopener">这里按照了这个</a>。只不过这个镜像资源实在太太太难找了吧，国内镜像网找不到，一些奇奇怪怪的网址有是有但也不敢下啊，<del>官网镜像慢得一</del>。后来发现在官网只下种子然后用迅雷打开，发现了新大陆！</p><p><a href="https://blog.csdn.net/weixin_43336281/article/details/97373288" target="_blank" rel="noopener">装上系统第一件事就是换源</a>，换完后立刻update，为后续做准备。</p><p>登录的话有putty啦vnc啦win的远程啦，可我就不同，我要teamview，我贪用teamview的远程。</p><p><a href="https://blog.csdn.net/realdonaldtrump/article/details/79694196" target="_blank" rel="noopener">轮子还是有的</a>，teamview尽量下15吧毕竟出事不久。但还是有坑，在辣个晚上，我按照所有教程设置了teamview密码在查看info中去连那个ID，连不上很绝望。那时无意的一点teamview图形界面启动看见了图形界面的ID和teamviewer –info显示的ID是不同的，连那个图形的突然就行了。</p><p>可是在卡片上运行这个的性能和速度，<del>谁用谁知道</del></p><h4 id="部署hexo"><a href="#部署hexo" class="headerlink" title="部署hexo"></a>部署hexo</h4><p>关键还是要有nodejs和npm啦，好吧还是找<a href="https://www.cnblogs.com/imapla/p/5532985.html" target="_blank" rel="noopener">轮子</a>，这里注意树莓派的架构版本，我的是3b，uname一下发现是arm7l，下载对应的版本即可。搭建按照遇见西门教程没有问题，hexo s然后上浏览器一看它出来鸟！！！（泪流满面）</p><p>后面的一切操作，什么主题，插件，文章，githubpage，啊哈都是支持的！</p><h4 id="其实"><a href="#其实" class="headerlink" title="其实"></a>其实</h4><p>其实没有必要。。</p><p>这个用派来搞有一个最大的愿景就是方便吧？比如我能随时随地写博客因为我能随时随地带着卡片，可如今云辣么多这种可携带性还有没有意义呢。</p><p>不管有没有意义，这卡片卡死了好几遍。这个是硬伤。</p><p>但折腾一下，就是其本身的魅力，尽管我已经放弃它了。</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h4 id=&quot;折腾不息，生命不止&quot;&gt;&lt;a href=&quot;#折腾不息，生命不止&quot; class=&quot;headerlink&quot; title=&quot;折腾不息，生命不止&quot;&gt;&lt;/a&gt;折腾不息，生命不止&lt;/h4&gt;&lt;p&gt;那天看见房间里的一角里面的那&lt;del&gt;寂寞的&lt;/del&gt;吃灰的树莓派，于心不忍。&lt;/p&gt;
+&lt;p&gt;恰好那时听一个很牛逼的鹅厂师兄的讲座，说他有用hexo博客。&lt;/p&gt;
+&lt;p&gt;加上一个看到一个心动的博客介绍指导 &lt;a href=&quot;https://www.simon96.online/2018/10/12/hexo-tutorial/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;遇见西门&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;我突然涌起一股想用这个卡片搭一个hexo博客的想法！（激情澎湃）&lt;/p&gt;
+    
+    </summary>
+    
+    
+    
+      <category term="树莓派" scheme="https://jahleelw.github.io/tags/%E6%A0%91%E8%8E%93%E6%B4%BE/"/>
+    
+      <category term="技术" scheme="https://jahleelw.github.io/tags/%E6%8A%80%E6%9C%AF/"/>
+    
+      <category term="hexo" scheme="https://jahleelw.github.io/tags/hexo/"/>
+    
+  </entry>
   
   <entry>
     <title>释然</title>
