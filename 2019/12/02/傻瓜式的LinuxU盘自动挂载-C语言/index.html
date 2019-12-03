@@ -6,17 +6,28 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://jahleelw.github.io">
-  <title>Tag: hexo | 夜里的狸猫</title>
+  <title>傻瓜式的LinuxU盘自动挂载-C语言 | 夜里的狸猫</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="oh...hahahaha..shit">
-<meta name="keywords" content="IT,技术，随笔">
-<meta property="og:type" content="website">
-<meta property="og:title" content="夜里的狸猫">
-<meta property="og:url" content="https:&#x2F;&#x2F;jahleelw.github.io&#x2F;tags&#x2F;hexo&#x2F;index.html">
+  <meta name="description" content="能work就行目的很简单，插上U盘后能自动挂载，但加点小要求：第一，挂载的目录要在&#x2F;media上。第二，挂载的目录名要和系统识别U盘的名字一样。比如，我有一个三个区的U盘，怼入后fdisk -l看一下看到它为&#x2F;dev&#x2F;sdb1\2\3，那么正常来讲，它应该挂载到&#x2F;media&#x2F;sdb1\2\3目录。 那基于这个目标，撸起袖子干。本来linux内置udev服务可以完美解决。但参考一堆教程配置来配置去有">
+<meta name="keywords" content="技术,linux,C">
+<meta property="og:type" content="article">
+<meta property="og:title" content="傻瓜式的LinuxU盘自动挂载-C语言">
+<meta property="og:url" content="https:&#x2F;&#x2F;jahleelw.github.io&#x2F;2019&#x2F;12&#x2F;02&#x2F;%E5%82%BB%E7%93%9C%E5%BC%8F%E7%9A%84LinuxU%E7%9B%98%E8%87%AA%E5%8A%A8%E6%8C%82%E8%BD%BD-C%E8%AF%AD%E8%A8%80&#x2F;index.html">
 <meta property="og:site_name" content="夜里的狸猫">
-<meta property="og:description" content="oh...hahahaha..shit">
+<meta property="og:description" content="能work就行目的很简单，插上U盘后能自动挂载，但加点小要求：第一，挂载的目录要在&#x2F;media上。第二，挂载的目录名要和系统识别U盘的名字一样。比如，我有一个三个区的U盘，怼入后fdisk -l看一下看到它为&#x2F;dev&#x2F;sdb1\2\3，那么正常来讲，它应该挂载到&#x2F;media&#x2F;sdb1\2\3目录。 那基于这个目标，撸起袖子干。本来linux内置udev服务可以完美解决。但参考一堆教程配置来配置去有">
 <meta property="og:locale" content="en">
+<meta property="og:image" content="https:&#x2F;&#x2F;jahleelw.github.io&#x2F;2019&#x2F;12&#x2F;02&#x2F;%E5%82%BB%E7%93%9C%E5%BC%8F%E7%9A%84LinuxU%E7%9B%98%E8%87%AA%E5%8A%A8%E6%8C%82%E8%BD%BD-C%E8%AF%AD%E8%A8%80&#x2F;amount_pic_1.jpg">
+<meta property="og:image" content="https:&#x2F;&#x2F;jahleelw.github.io&#x2F;2019&#x2F;12&#x2F;02&#x2F;%E5%82%BB%E7%93%9C%E5%BC%8F%E7%9A%84LinuxU%E7%9B%98%E8%87%AA%E5%8A%A8%E6%8C%82%E8%BD%BD-C%E8%AF%AD%E8%A8%80&#x2F;data_pic_1.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;jahleelw.github.io&#x2F;2019&#x2F;12&#x2F;02&#x2F;%E5%82%BB%E7%93%9C%E5%BC%8F%E7%9A%84LinuxU%E7%9B%98%E8%87%AA%E5%8A%A8%E6%8C%82%E8%BD%BD-C%E8%AF%AD%E8%A8%80&#x2F;data_pic_1.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;jahleelw.github.io&#x2F;2019&#x2F;12&#x2F;02&#x2F;%E5%82%BB%E7%93%9C%E5%BC%8F%E7%9A%84LinuxU%E7%9B%98%E8%87%AA%E5%8A%A8%E6%8C%82%E8%BD%BD-C%E8%AF%AD%E8%A8%80&#x2F;data_pic_2.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;jahleelw.github.io&#x2F;2019&#x2F;12&#x2F;02&#x2F;%E5%82%BB%E7%93%9C%E5%BC%8F%E7%9A%84LinuxU%E7%9B%98%E8%87%AA%E5%8A%A8%E6%8C%82%E8%BD%BD-C%E8%AF%AD%E8%A8%80&#x2F;data_pic_3.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;jahleelw.github.io&#x2F;2019&#x2F;12&#x2F;02&#x2F;%E5%82%BB%E7%93%9C%E5%BC%8F%E7%9A%84LinuxU%E7%9B%98%E8%87%AA%E5%8A%A8%E6%8C%82%E8%BD%BD-C%E8%AF%AD%E8%A8%80&#x2F;data_pic_3.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;jahleelw.github.io&#x2F;2019&#x2F;12&#x2F;02&#x2F;%E5%82%BB%E7%93%9C%E5%BC%8F%E7%9A%84LinuxU%E7%9B%98%E8%87%AA%E5%8A%A8%E6%8C%82%E8%BD%BD-C%E8%AF%AD%E8%A8%80&#x2F;data_pic_4.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;jahleelw.github.io&#x2F;2019&#x2F;12&#x2F;02&#x2F;%E5%82%BB%E7%93%9C%E5%BC%8F%E7%9A%84LinuxU%E7%9B%98%E8%87%AA%E5%8A%A8%E6%8C%82%E8%BD%BD-C%E8%AF%AD%E8%A8%80&#x2F;data_pic_5.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;jahleelw.github.io&#x2F;2019&#x2F;12&#x2F;02&#x2F;%E5%82%BB%E7%93%9C%E5%BC%8F%E7%9A%84LinuxU%E7%9B%98%E8%87%AA%E5%8A%A8%E6%8C%82%E8%BD%BD-C%E8%AF%AD%E8%A8%80&#x2F;automount_cost.png">
+<meta property="og:updated_time" content="2019-12-03T03:36:16.003Z">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https:&#x2F;&#x2F;jahleelw.github.io&#x2F;2019&#x2F;12&#x2F;02&#x2F;%E5%82%BB%E7%93%9C%E5%BC%8F%E7%9A%84LinuxU%E7%9B%98%E8%87%AA%E5%8A%A8%E6%8C%82%E8%BD%BD-C%E8%AF%AD%E8%A8%80&#x2F;amount_pic_1.jpg">
   
     <link rel="alternative" href="/atom.xml" title="夜里的狸猫" type="application/atom+xml">
   
@@ -177,68 +188,283 @@ var _hmt = _hmt || [];
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-傻瓜式的LinuxU盘自动挂载-C语言" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2019" class="archive-year">2019</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/11/28/%E6%A0%91%E8%8E%93%E6%B4%BEhexo%E8%BE%9B%E9%85%B8%E5%8F%B2/" class="archive-article-date">
-  	<time datetime="2019-11-28T10:09:04.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-28</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/11/28/%E6%A0%91%E8%8E%93%E6%B4%BEhexo%E8%BE%9B%E9%85%B8%E5%8F%B2/">树莓派hexo辛酸史</a>
+    <h1 class="article-title" itemprop="name">
+      傻瓜式的LinuxU盘自动挂载-C语言
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        
+        <a href="/2019/12/02/%E5%82%BB%E7%93%9C%E5%BC%8F%E7%9A%84LinuxU%E7%9B%98%E8%87%AA%E5%8A%A8%E6%8C%82%E8%BD%BD-C%E8%AF%AD%E8%A8%80/" class="archive-article-date">
+  	<time datetime="2019-12-02T08:02:01.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-12-02</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id><a href="#" class="headerlink" title></a></h4><h4 id="能work就行"><a href="#能work就行" class="headerlink" title="能work就行"></a>能work就行</h4><p>目的很简单，插上U盘后能自动挂载，但加点小要求：第一，挂载的目录要在/media上。第二，挂载的目录名要和系统识别U盘的名字一样。比如，我有一个三个区的U盘，怼入后fdisk -l看一下看到它为/dev/sdb1\2\3，那么正常来讲，它应该挂载到/media/sdb1\2\3目录。</p>
+<p>那基于这个目标，撸起袖子干。本来linux内置udev服务可以完美解决。但参考一堆教程配置来配置去有各种奇奇怪怪的问题达不到预期目的。外加上由于这个是小系统被剪过（从2G剪到550M的fedora…），缺了什么咱们还真不确定。</p>
+<p>至此，一个低端的自动挂载程序想法悄咪咪的生成。但求能work out。</p>
+<a id="more"></a>
+
+<h4 id="思路与想法"><a href="#思路与想法" class="headerlink" title="思路与想法"></a>思路与想法</h4><p>简单的说，就是不断检查系统硬盘分区，多了就加，少了就减。</p>
+<p>当然这是个特例，因为目标系统定死了首先它只有一个硬盘装的是系统，也就是sda。其次它如果有新的硬盘进入系统，也只能是U盘。</p>
+<p>所以分三块：</p>
+<ol>
+<li>流程控制，控制执行频率和挂载卸载执行分支；</li>
+<li>查看系统硬盘状态，并得到相应数据；</li>
+<li>生成硬盘信息数据结构，同步挂载卸载；</li>
+</ol>
+<p>流程控制，简单的采用while(1)和sleep控制，采用数据对比每番进行判断；<br>硬盘状态，在/proc/partitions可以读取，再加个wc -l细化处理可以简单得到当前硬盘数；<br>数据结构，由于每个硬盘可能有几个区，而代表每个区的是字符串结构，符合这种直接用二位数组，再由于顺序没有特别的重要，善用字符串比较和下标就行，所以总的来说算是一个比较离散的二维数组吧。</p>
+<p>上流程图：</p>
+<div align="center">
+
+<p><img src="/2019/12/02/%E5%82%BB%E7%93%9C%E5%BC%8F%E7%9A%84LinuxU%E7%9B%98%E8%87%AA%E5%8A%A8%E6%8C%82%E8%BD%BD-C%E8%AF%AD%E8%A8%80/amount_pic_1.jpg" alt="流程图"></p>
+</div>
+
+<p>由于也只有一条线程，也不用考虑数据的冲突，就一路往下跑就是了。</p>
+<h4 id="数据结构"><a href="#数据结构" class="headerlink" title="数据结构"></a>数据结构</h4><p>细想整个流程最重要的部分，也就是有一个全局的二维数组来记录着当前挂载了的硬盘。<br>每当硬盘有变动，这个二维数组就产生相应的变化，那具体的增删，是有点点类似队列但又不是，因为你无法判断是哪个先出（是哪个磁盘先拔出来），考虑过链表，不过总共才四五个USB口用数组它不香吗。</p>
+<p>那么假设现在挂载了个三个分区的U盘B，sdb1，sdb2，sdb3，那么在这个全局数组中数据应该是这样的：<br><img src="/2019/12/02/%E5%82%BB%E7%93%9C%E5%BC%8F%E7%9A%84LinuxU%E7%9B%98%E8%87%AA%E5%8A%A8%E6%8C%82%E8%BD%BD-C%E8%AF%AD%E8%A8%80/data_pic_1.png" alt="数组1"></p>
+<p>这时如果先插入两个分区的U盘C和一个分区的U盘D，它应该会进行添加即：<br><img src="/2019/12/02/%E5%82%BB%E7%93%9C%E5%BC%8F%E7%9A%84LinuxU%E7%9B%98%E8%87%AA%E5%8A%A8%E6%8C%82%E8%BD%BD-C%E8%AF%AD%E8%A8%80/data_pic_1.png" alt="数组1">  —&gt;   <img src="/2019/12/02/%E5%82%BB%E7%93%9C%E5%BC%8F%E7%9A%84LinuxU%E7%9B%98%E8%87%AA%E5%8A%A8%E6%8C%82%E8%BD%BD-C%E8%AF%AD%E8%A8%80/data_pic_2.png" alt="数组2">   —&gt;   <img src="/2019/12/02/%E5%82%BB%E7%93%9C%E5%BC%8F%E7%9A%84LinuxU%E7%9B%98%E8%87%AA%E5%8A%A8%E6%8C%82%E8%BD%BD-C%E8%AF%AD%E8%A8%80/data_pic_3.png" alt="数组3"></p>
+<p>而如果此时拔出U盘C，它该进行如下减少并调整：<br><img src="/2019/12/02/%E5%82%BB%E7%93%9C%E5%BC%8F%E7%9A%84LinuxU%E7%9B%98%E8%87%AA%E5%8A%A8%E6%8C%82%E8%BD%BD-C%E8%AF%AD%E8%A8%80/data_pic_3.png" alt="数组3">   —&gt;   <img src="/2019/12/02/%E5%82%BB%E7%93%9C%E5%BC%8F%E7%9A%84LinuxU%E7%9B%98%E8%87%AA%E5%8A%A8%E6%8C%82%E8%BD%BD-C%E8%AF%AD%E8%A8%80/data_pic_4.png" alt="数组4">   —&gt;   <img src="/2019/12/02/%E5%82%BB%E7%93%9C%E5%BC%8F%E7%9A%84LinuxU%E7%9B%98%E8%87%AA%E5%8A%A8%E6%8C%82%E8%BD%BD-C%E8%AF%AD%E8%A8%80/data_pic_5.png" alt="数组5"></p>
+<p>添加的时候是从尾部添加，删除时及时移位进行前面的空位补全。其中有一个对应的全局变量记录着当前挂载的硬盘数，可以用作这个全局数组的下标进行处理。</p>
+<h4 id="代码层级"><a href="#代码层级" class="headerlink" title="代码层级"></a>代码层级</h4><p>从代码层级上说，从上往下简要的几个重要部份。<br>宏定义和全局，全局也就上述提到那俩~</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">define</span> PARTITION_CNT_MAX		50						<span class="comment">//最大接入硬盘数，稍微给大点没事</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> PARTITION_LEN_SIZE		5						<span class="comment">//最大分区名字长度</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> SLEEP_TIME_US			1000*500				<span class="comment">//睡眠时间，等于是频率</span></span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> BUFF_SIZE				1024*4					<span class="comment">//取得数据中转缓存</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> CMD_SIZE				100						<span class="comment">//存放Linux命令缓存</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> BUFF_SIZE_MINOR			10						<span class="comment">//取得数据中转小缓存</span></span></span><br><span class="line"></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> LAST_DISK_POINT  		<span class="meta-string">"sda1"</span>					<span class="comment">//固有硬盘的最后一个，往下都是添加的</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> NORMAL_DISK_NUM			4						<span class="comment">//没新接硬盘时的正常/proc/partitions行数</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> DEBUG											<span class="comment">//调试开关</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">char</span> g_disk_mount[PARTITION_CNT_MAX][PARTITION_LEN_SIZE] = &#123;<span class="number">0</span>&#125;;  	</span><br><span class="line"><span class="keyword">int</span> g_disk_mount_cnt = <span class="number">0</span>;</span><br></pre></td></tr></table></figure>
+
+<hr>
+<p>一开始先检查硬盘数目，将数据转化成自己想要的信息：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">check_Disk_Num</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> disk_num;</span><br><span class="line">	<span class="keyword">char</span> buff[BUFF_SIZE_MINOR] = &#123;<span class="number">0</span>&#125;;</span><br><span class="line">	<span class="keyword">char</span> cmd[CMD_SIZE] = &#123;<span class="number">0</span>&#125;;</span><br><span class="line">	<span class="built_in">sprintf</span>(cmd, <span class="string">"cat /proc/partitions | wc -l"</span>);</span><br><span class="line">	FILE *fp = popen(cmd, <span class="string">"r"</span>);</span><br><span class="line">	<span class="keyword">while</span>( fgets(buff, BUFF_SIZE_MINOR<span class="number">-1</span>, fp) != <span class="literal">NULL</span>)</span><br><span class="line">    &#123;</span><br><span class="line">		<span class="keyword">continue</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">	disk_num = atoi(buff);</span><br><span class="line">	<span class="meta">#<span class="meta-keyword">ifdef</span> DEBUG</span></span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"check disk num:  %d\n"</span>, disk_num);</span><br><span class="line">	<span class="meta">#<span class="meta-keyword">endif</span></span></span><br><span class="line">	pclose(fp);</span><br><span class="line">	<span class="keyword">return</span> disk_num;	</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<hr>
+<p>每当检测到硬盘数目增加，会先取得增加的硬盘名字列表，保存在disk[]这个数组里：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">char</span> *p = <span class="built_in">strstr</span>(buff,LAST_DISK_POINT);</span><br><span class="line"><span class="keyword">if</span>(p != <span class="literal">NULL</span>)</span><br><span class="line">&#123;</span><br><span class="line">    disk_partition_cnt = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">while</span>(<span class="number">1</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span> (disk_partition_cnt &gt;= PARTITION_CNT_MAX)</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line"></span><br><span class="line">        p = <span class="built_in">strstr</span>(p + <span class="number">4</span>,<span class="string">"sd"</span>);</span><br><span class="line">        <span class="keyword">if</span>(p != <span class="literal">NULL</span>)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="comment">//get mount disk list</span></span><br><span class="line">            <span class="built_in">memset</span>(disk[disk_partition_cnt], <span class="number">0</span>, PARTITION_LEN_SIZE);</span><br><span class="line">            <span class="built_in">memcpy</span>(disk[disk_partition_cnt], p, <span class="number">4</span>); </span><br><span class="line">            change_Enter(disk[disk_partition_cnt]);</span><br><span class="line">            disk_partition_cnt++;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<hr>
+<p>得到数组列表，判断下是否单分区是否已存在，进行全局数据添加操作和系统挂载：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//judge and add to global</span></span><br><span class="line">disk_mount_cnt_temp = g_disk_mount_cnt;</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; disk_partition_cnt; i++)</span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">if</span> (disk_Is_Exit(disk[i]))</span><br><span class="line">        <span class="keyword">continue</span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//if len=3 disk have no partition</span></span><br><span class="line">    <span class="keyword">if</span> (<span class="built_in">strlen</span>(disk[i]) == <span class="number">3</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span> ( !disk_Is_Single_Partition(disk[i]))</span><br><span class="line">            <span class="keyword">continue</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="built_in">memcpy</span>(g_disk_mount[g_disk_mount_cnt], disk[i], <span class="built_in">strlen</span>(disk[i]));</span><br><span class="line">    g_disk_mount_cnt++;</span><br><span class="line">&#125;</span><br><span class="line">run_Mount(g_disk_mount_cnt - disk_mount_cnt_temp);</span><br></pre></td></tr></table></figure>
+
+<hr>
+<p>根据获取的实际挂载磁盘信息和全局数组进行比对，如果发现实际的少了些，那要进行卸载和全局数组调整删除操作了：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; g_disk_mount_cnt; i++)</span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">if</span> (<span class="built_in">strstr</span>(buff,g_disk_mount[i]) == <span class="literal">NULL</span>)</span><br><span class="line">    &#123;	</span><br><span class="line">        <span class="built_in">memset</span>(cmd, <span class="number">0</span>, CMD_SIZE);</span><br><span class="line">        <span class="built_in">sprintf</span>(cmd,<span class="string">"umount /media/%s"</span>,g_disk_mount[i]);</span><br><span class="line">        <span class="keyword">if</span> ( <span class="number">0</span> != run_System_Cmd(cmd))</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="built_in">memset</span>(cmd, <span class="number">0</span>, CMD_SIZE);</span><br><span class="line">            <span class="built_in">sprintf</span>(cmd,<span class="string">"umount /media/%s -l"</span>,g_disk_mount[i]);</span><br><span class="line">            run_System_Cmd(cmd);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="built_in">memset</span>(cmd, <span class="number">0</span>, CMD_SIZE);</span><br><span class="line">        <span class="built_in">sprintf</span>(cmd, <span class="string">"rm /media/%s -rf"</span>, g_disk_mount[i]);</span><br><span class="line">        run_System_Cmd(cmd);</span><br><span class="line"></span><br><span class="line">        disk_umount_pos[disk_umount_cnt] = i;</span><br><span class="line">        disk_umount_cnt++;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<hr>
+<p>卸载系统里已经没有了的硬盘后，进行数组的清除和移位操作：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//clear the umount disk from global</span></span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; disk_umount_cnt; i++)</span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">if</span> (disk_umount_pos[i] == <span class="number">-1</span>)</span><br><span class="line">        <span class="keyword">continue</span>;</span><br><span class="line"></span><br><span class="line">    <span class="built_in">memset</span>(g_disk_mount[disk_umount_pos[i]], <span class="number">0</span>, PARTITION_LEN_SIZE);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//reset the global</span></span><br><span class="line">g_disk_mount_cnt = g_disk_mount_cnt - disk_umount_cnt;</span><br><span class="line"><span class="keyword">int</span> temp_cnt = <span class="number">0</span>;</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; PARTITION_CNT_MAX; i++)</span><br><span class="line">&#123;</span><br><span class="line">    <span class="keyword">if</span> (temp_cnt == g_disk_mount_cnt)</span><br><span class="line">        <span class="keyword">break</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> (<span class="built_in">strlen</span>(g_disk_mount[i]) != <span class="number">0</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">memcpy</span>(g_disk_mount[temp_cnt], g_disk_mount[i], PARTITION_LEN_SIZE);</span><br><span class="line">        temp_cnt++;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">int</span> i = temp_cnt; i &lt; PARTITION_CNT_MAX; i++)</span><br><span class="line">&#123;</span><br><span class="line">    <span class="built_in">memset</span>(g_disk_mount[i], <span class="number">0</span>, PARTITION_LEN_SIZE);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+<p>主要操作就这么多，当然还有很多细代码块，实现的方法也有很多。<br>还是那句话，能work就行。。。</p>
+<h4 id="终语"><a href="#终语" class="headerlink" title="终语"></a>终语</h4><p>是有点儿low的，不过的确也能按照要求完成任务，最起码baseline是达到的。<br>还是挺感概这个哈皮方法能上的了台~毕竟当初记得有一个作业，说把开发板作为一个电子相册，插入满是图片的U盘时开发版自动挂载U盘并显示图片出来。<br>哈哈哈如今竟然用到了，只不过别人变成了实际的用处，用在哪咱也不知道也不敢问，但完成底层的挂卸载管他怎么操作呢。</p>
+<p>最后放上挂卸载时程序消耗图吧和一个服务检测这个程序会不会挂掉，挂掉就拉起来：<br><img src="/2019/12/02/%E5%82%BB%E7%93%9C%E5%BC%8F%E7%9A%84LinuxU%E7%9B%98%E8%87%AA%E5%8A%A8%E6%8C%82%E8%BD%BD-C%E8%AF%AD%E8%A8%80/automount_cost.png" alt="耗费资源"></p>
+<p>鹅还有哈皮代码：<br><a href="/download/automount.c" ">automount</a></p>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" target="_blank" rel="noopener" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/img/weixin.jpg">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag article-tag-list-link color4">树莓派</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
         			<a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag article-tag-list-link color3">技术</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag article-tag-list-link color5">hexo</a>
+        			<a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag article-tag-list-link color1">linux</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag article-tag-list-link color2">C</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" target="_blank" rel="noopener" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" target="_blank" rel="noopener" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" target="_blank" rel="noopener" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" target="_blank" rel="noopener" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" target="_blank" rel="noopener" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" target="_blank" rel="noopener" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" target="_blank" rel="noopener" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" target="_blank" rel="noopener" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" target="_blank" rel="noopener" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;" target="_blank" rel="noopener"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=https://jahleelw.github.io/2019/12/02/%E5%82%BB%E7%93%9C%E5%BC%8F%E7%9A%84LinuxU%E7%9B%98%E8%87%AA%E5%8A%A8%E6%8C%82%E8%BD%BD-C%E8%AF%AD%E8%A8%80/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
   
   
-    </div></section>
+    <a href="/2019/11/28/%E6%A0%91%E8%8E%93%E6%B4%BEhexo%E8%BE%9B%E9%85%B8%E5%8F%B2/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">树莓派hexo辛酸史</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" target="_blank" rel="noopener" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+  
+  
   
 
-    
+  
+  <div id="SOHUCS" sid="傻瓜式的LinuxU盘自动挂载-C语言" ></div> 
+<script charset="utf-8" type="text/javascript" src="//changyan.sohu.com/upload/changyan.js" ></script>
+<script type="text/javascript">
+    window.changyan.api.config({
+        appid: "true",
+        conf: "true"
+    });
+</script>
+</script>
+  
+
+  
+
+  
+ 
+ 
+  <section id="comments" class="comments">
+    <style>
+      .comments{margin:30px;padding:10px;background:#fff}
+      @media screen and (max-width:800px){.comments{margin:auto;padding:10px;background:#fff}}
+    </style>
+    <div id="vcomment" class="comment"></div>
+<script src="//cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script>
+<script src="//cdn.jsdelivr.net/npm/leancloud-storage/dist/av-min.js"></script>
+<script src='//cdn.jsdelivr.net/npm/valine/dist/Valine.min.js'></script>
+<script>
+   var notify = 'false' == true ? true : false;
+   var verify = 'false' == true ? true : false;
+   new Valine({
+            av: AV,
+            el: '.comment',
+            notify: notify,
+            verify: verify,
+            app_id: "uJj69WR1u8TgRkpqkV7HNyEM-gzGzoHsz",
+            app_key: "WxvNjedwbuuxwLTSh0eg441d",
+            placeholder: "Just go go",
+            avatar: "mm",
+            avatar_cdn: "",
+            pageSize: 15
+    });
+    if(window.location.hash){
+          var checkExist = setInterval(function() {
+            if (document.getElementById(window.location.hash.replace("#",""))) {
+              location.href = window.location.hash;
+              clearInterval(checkExist);
+            }
+          }, 250);
+        }
+</script>
+
+  </section>
+ 
+
+
 
 
           </div>
@@ -261,9 +487,9 @@ var _hmt = _hmt || [];
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
-		isTag: true,
+		isTag: false,
 		isCategory: false,
 		open_in_new: false,
 		toc_hide_index: true,
