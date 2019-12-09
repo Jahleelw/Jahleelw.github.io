@@ -6,16 +6,17 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://nightcivet.live">
-  <title>Archives: 2019 | 夜里的狸猫</title>
+  <title>我也能自己制造交叉工具编译链了之Crosstool-ng | 夜里的狸猫</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="oh...hahahaha..shit">
-<meta name="keywords" content="IT,技术，随笔">
-<meta property="og:type" content="website">
-<meta property="og:title" content="夜里的狸猫">
-<meta property="og:url" content="https:&#x2F;&#x2F;nightcivet.live&#x2F;archives&#x2F;2019&#x2F;index.html">
+  <meta name="description" content="速度与激情非常隐秘不知道怎么说出口地说，某芯片采用mips架构，可是速度着实很尴尬。背后的一切不谈，我们要交叉编译，在x86上编译mips架构的程序。 工具链一听非常底层，可软件这个世界总有大佬不断的探索去降低制造成本和难度，并且开源。工具介绍可以去官网或者轮子看，可以简单的说成这是一个易用的制造工具链工具。 这里记录一下制造mips工具链的过程，为的是能激情的带着速度编译程序并跑起来。">
+<meta name="keywords" content="linux,编译,mips,技术">
+<meta property="og:type" content="article">
+<meta property="og:title" content="我也能自己制造交叉工具编译链了之Crosstool-ng">
+<meta property="og:url" content="https:&#x2F;&#x2F;nightcivet.live&#x2F;2019&#x2F;12&#x2F;06&#x2F;%E6%88%91%E4%B9%9F%E8%83%BD%E8%87%AA%E5%B7%B1%E5%88%B6%E9%80%A0%E4%BA%A4%E5%8F%89%E5%B7%A5%E5%85%B7%E7%BC%96%E8%AF%91%E9%93%BE%E4%BA%86%E4%B9%8BCrosstool-ng&#x2F;index.html">
 <meta property="og:site_name" content="夜里的狸猫">
-<meta property="og:description" content="oh...hahahaha..shit">
+<meta property="og:description" content="速度与激情非常隐秘不知道怎么说出口地说，某芯片采用mips架构，可是速度着实很尴尬。背后的一切不谈，我们要交叉编译，在x86上编译mips架构的程序。 工具链一听非常底层，可软件这个世界总有大佬不断的探索去降低制造成本和难度，并且开源。工具介绍可以去官网或者轮子看，可以简单的说成这是一个易用的制造工具链工具。 这里记录一下制造mips工具链的过程，为的是能激情的带着速度编译程序并跑起来。">
 <meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2019-12-09T09:03:45.164Z">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="夜里的狸猫" type="application/atom+xml">
@@ -177,36 +178,82 @@ var _hmt = _hmt || [];
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-我也能自己制造交叉工具编译链了之Crosstool-ng" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2019" class="archive-year">2019</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/12/06/%E6%88%91%E4%B9%9F%E8%83%BD%E8%87%AA%E5%B7%B1%E5%88%B6%E9%80%A0%E4%BA%A4%E5%8F%89%E5%B7%A5%E5%85%B7%E7%BC%96%E8%AF%91%E9%93%BE%E4%BA%86%E4%B9%8BCrosstool-ng/" class="archive-article-date">
-  	<time datetime="2019-12-06T08:35:05.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-12-06</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/12/06/%E6%88%91%E4%B9%9F%E8%83%BD%E8%87%AA%E5%B7%B1%E5%88%B6%E9%80%A0%E4%BA%A4%E5%8F%89%E5%B7%A5%E5%85%B7%E7%BC%96%E8%AF%91%E9%93%BE%E4%BA%86%E4%B9%8BCrosstool-ng/">我也能自己制造交叉工具编译链了之Crosstool-ng</a>
+    <h1 class="article-title" itemprop="name">
+      我也能自己制造交叉工具编译链了之Crosstool-ng
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        
+        <a href="/2019/12/06/%E6%88%91%E4%B9%9F%E8%83%BD%E8%87%AA%E5%B7%B1%E5%88%B6%E9%80%A0%E4%BA%A4%E5%8F%89%E5%B7%A5%E5%85%B7%E7%BC%96%E8%AF%91%E9%93%BE%E4%BA%86%E4%B9%8BCrosstool-ng/" class="archive-article-date">
+  	<time datetime="2019-12-06T08:35:05.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-12-06</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="速度与激情"><a href="#速度与激情" class="headerlink" title="速度与激情"></a>速度与激情</h4><p><del>非常隐秘不知道怎么说出口</del>地说，某芯片采用mips架构，可是速度着实很尴尬。<br>背后的一切不谈，我们要交叉编译，在x86上编译mips架构的程序。</p>
+<p>工具链一听非常底层，可软件这个世界总有大佬不断的探索去降低制造成本和难度，并且开源。<br>工具介绍可以去<a href="http://crosstool-ng.github.io/" target="_blank" rel="noopener">官网</a>或者<a href="https://blog.csdn.net/cztqwan/article/details/79428341" target="_blank" rel="noopener">轮子</a>看，可以简单的说成这是一个易用的制造工具链工具。</p>
+<p>这里记录一下制造mips工具链的过程，为的是能激情的带着速度编译程序并跑起来。</p>
+<a id="more"></a>
+
+<h4 id="和大家都差不多的步骤"><a href="#和大家都差不多的步骤" class="headerlink" title="和大家都差不多的步骤-.-"></a>和大家都差不多的步骤-.-</h4><p><del>虽然都差不多但还是当作前无古人地记一下</del><br>根据踩过的雷，保持在用户状态下操作（鄙视整天一开终端立刻sudo的某自己）。</p>
+<p>1.下载crosstool-ng工具<br>    这个简单，直接<a href="http://crosstool-ng.org/download/crosstool-ng/crosstool-ng-1.23.0.tar.xz" target="_blank" rel="noopener">官网下载</a>，这个时候的最新版应该是1.24吧。由于是用户，我在自己的/home/jal/下新建了一个文件夹作为此工程的目录，所以东西放到/home/jal/mips-linux-obj/目录下。</p>
+<p>2.解压编译安装<br>    运行tar xvf 解压，新建一个安装目录NG_install，进入crosstool源码目录运行./configure –prefix=/home/jal/mips-linux-obj/NG_install、make、make install。如果没有意外，顺利完成后在NG_install目录下能看到bin libexec share三个目录生成。</p>
+<p>3.添加环境变量<br>    再次强调是用户模式，修改~/.bashrc，末尾添加PATH=$PATH:/home/jal/mips-linux-obj/mips-linux-obj/bin，再source一下环境变量搞定</p>
+<p>4.配置制作环境<br>    先新建NG_build和NG_src和tool三个目录，NG_build用作构建工具链的目录，里面有构建日志，tool用于存放制好的工具链，NG_src用于存放制造工具链过程中下载的工具源码包。至此整个工程的目录都差不多了，不厌其烦地再显示一次，主要就是/home/jal/mips-linux-obj/目录下，有NG_build、NG_install、NG_src、tool和crosstool-ng-1.24.0这几个目录（够了）。工具链配置和内核配置很很很像，进入NG_build运行ct-ng list-samples查看支持的硬件配置，找到自己想要的直接ct-ng mipsel-unknown-linux-gnu，他会复制这个硬件配置作为本目录的.config文件，然后运行ct-ng menuconfig 命令运行一个ncurses界面进行细化配置（果然就是内核配置方法啊亲）</p>
+<p>​    在Paths and misc options —&gt; 这个选项中设置文件路径，新建的目录要用到了<br>在 <strong>* Paths *</strong>下一行敲入/home/jal/mips-linux-obj/NG_src/；在Working diretory下一行敲入/home/jal/mips-linux-obj/tool；用到它们了。</p>
+<p>​    在Target option —&gt; 这个选项中设置芯片特性，介入某芯片 <strong>* Option for mips *</strong> 选ABI（n64）Bitness: 选(64-bit)<br>，architecture level 敲mips64，Floationg point: 选(hardware(FPU))。</p>
+<p>​    按一下save，配置就这么好了。</p>
+<p>5.跑它！<br>    执行ct-ng build跑起来！<br>   过程可能会出错，他是先从网上下载一下需要用到的源码工具包在解压构建，包括内核。如果这时下载链接崩了我也就崩了，这时可以从别的地方下载对应版本的包放到NG_src目录下，就可以了。<br>   我那个年代，需要这些：<br>   automake-1.16.1.tar.xz<br>   binutils-2.32.tar.xz<br>   expat-2.2.6.tar.bz2<br>   gcc-8.3.0.tar.xz<br>   gdb-8.2.1.tar.xz<br>   gettext-0.19.8.1.tar.xz<br>   glibc-2.28.tar.xz<br>   glibc-2.29.tar.xz<br>   gmp-6.1.2.tar.xz<br>   isl-0.20.tar.xz<br>   libiconv-1.15.tar.gz<br>   linux-4.20.8.tar.gz<br>   mpc-1.1.0.tar.gz<br>   mpfr-4.0.2.tar.xz<br>   ncurses-6.1.tar.gz<br>   strace-4.26.tar.xz<br>   zlib-1.2.11.tar.gz<br>   跑挺久的。。它还会帮你算时间，我用了一个钟。</p>
+<h4 id="来了来了它真的来了"><a href="#来了来了它真的来了" class="headerlink" title="来了来了它真的来了"></a>来了来了它真的来了</h4><p>去tool目录查看成品！这一看就要设置环境变量。<br>这里就是编译的一堆宏定义了，一般都是写一个environment文件，里面一堆export，每次用工具链之前source一下就好。</p>
+<p>那基于一个开源嵌入式的文件修改这个environment，暂时来说把文件写成这样，当然后续如果要改还是得改改这个文件。</p>
+<p>文件里定义了交叉工具链存放的位置，把对应的目录名字配成自己的，每次source之后就能看到有这个工具链了。</p>
+<p><a href="/download/environment-setup-mips64r2el-poky-linux" ">environment</a></p>
+<h4 id="编一下它"><a href="#编一下它" class="headerlink" title="编一下它"></a>编一下它</h4><p>看到那个环境文件定义的链接库，链接头文件，CPPFLAGS、LDFLAGS等等，所以编一个最简单的helloworld它可能都说找不到那个stdio.h，其实也只需要把stdio.h放到对应的链接头文件目录就可以了。依赖库会比较麻烦，毕竟库也有架构之分，最好能直接从仓库什么的拿到对应架构的依赖库吧，依赖库的依赖库，需要添加-rpath和-rpath-link选项，其实也差不了多少。</p>
+<p>那么source完之后编一下hello：mips64el-3a-linux-gnu-gcc hello.c -o hello<br>file一下编出来的可执行程序看到架构和其他东西都正确。<br>当然条件允许还可以放到目标机运行一下。</p>
+<h4 id="后续"><a href="#后续" class="headerlink" title="后续"></a>后续</h4><p>后续编译工程项目，带有Makefile那些，保证Makefile里CC和一些链接目录正确，和对应的库齐全，基本是没有问题的。</p>
+<p>嗨呀，那么费劲。就为了个速度。</p>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" target="_blank" rel="noopener" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/img/weixin.jpg">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -230,149 +277,156 @@ var _hmt = _hmt || [];
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" target="_blank" rel="noopener" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" target="_blank" rel="noopener" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" target="_blank" rel="noopener" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" target="_blank" rel="noopener" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" target="_blank" rel="noopener" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" target="_blank" rel="noopener" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" target="_blank" rel="noopener" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" target="_blank" rel="noopener" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" target="_blank" rel="noopener" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;" target="_blank" rel="noopener"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=https://nightcivet.live/2019/12/06/%E6%88%91%E4%B9%9F%E8%83%BD%E8%87%AA%E5%B7%B1%E5%88%B6%E9%80%A0%E4%BA%A4%E5%8F%89%E5%B7%A5%E5%85%B7%E7%BC%96%E8%AF%91%E9%93%BE%E4%BA%86%E4%B9%8BCrosstool-ng/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/12/02/%E5%82%BB%E7%93%9C%E5%BC%8F%E7%9A%84LinuxU%E7%9B%98%E8%87%AA%E5%8A%A8%E6%8C%82%E8%BD%BD-C%E8%AF%AD%E8%A8%80/" class="archive-article-date">
-  	<time datetime="2019-12-02T08:02:01.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-12-02</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2019/12/02/%E5%82%BB%E7%93%9C%E5%BC%8F%E7%9A%84LinuxU%E7%9B%98%E8%87%AA%E5%8A%A8%E6%8C%82%E8%BD%BD-C%E8%AF%AD%E8%A8%80/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">傻瓜式的LinuxU盘自动挂载-C语言</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" target="_blank" rel="noopener" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/12/02/%E5%82%BB%E7%93%9C%E5%BC%8F%E7%9A%84LinuxU%E7%9B%98%E8%87%AA%E5%8A%A8%E6%8C%82%E8%BD%BD-C%E8%AF%AD%E8%A8%80/">傻瓜式的LinuxU盘自动挂载-C语言</a>
-    </h1>
+  
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag article-tag-list-link color1">linux</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag article-tag-list-link color3">技术</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag article-tag-list-link color2">C</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/11/28/%E6%A0%91%E8%8E%93%E6%B4%BEhexo%E8%BE%9B%E9%85%B8%E5%8F%B2/" class="archive-article-date">
-  	<time datetime="2019-11-28T10:09:04.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-28</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/11/28/%E6%A0%91%E8%8E%93%E6%B4%BEhexo%E8%BE%9B%E9%85%B8%E5%8F%B2/">树莓派hexo辛酸史</a>
-    </h1>
+  <div id="SOHUCS" sid="我也能自己制造交叉工具编译链了之Crosstool-ng" ></div> 
+<script charset="utf-8" type="text/javascript" src="//changyan.sohu.com/upload/changyan.js" ></script>
+<script type="text/javascript">
+    window.changyan.api.config({
+        appid: "true",
+        conf: "true"
+    });
+</script>
+</script>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag article-tag-list-link color4">树莓派</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag article-tag-list-link color3">技术</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag article-tag-list-link color5">hexo</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/11/27/the-break-heard/" class="archive-article-date">
-  	<time datetime="2019-11-27T01:20:01.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-27</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/11/27/the-break-heard/">释然</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag article-tag-list-link color3">随笔</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
-  
-    </div></section>
-  
+ 
+ 
+  <section id="comments" class="comments">
+    <style>
+      .comments{margin:30px;padding:10px;background:#fff}
+      @media screen and (max-width:800px){.comments{margin:auto;padding:10px;background:#fff}}
+    </style>
+    <div id="vcomment" class="comment"></div>
+<script src="//cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script>
+<script src="//cdn.jsdelivr.net/npm/leancloud-storage/dist/av-min.js"></script>
+<script src='//cdn.jsdelivr.net/npm/valine/dist/Valine.min.js'></script>
+<script>
+   var notify = 'false' == true ? true : false;
+   var verify = 'false' == true ? true : false;
+   new Valine({
+            av: AV,
+            el: '.comment',
+            notify: notify,
+            verify: verify,
+            app_id: "uJj69WR1u8TgRkpqkV7HNyEM-gzGzoHsz",
+            app_key: "WxvNjedwbuuxwLTSh0eg441d",
+            placeholder: "Just go go",
+            avatar: "mm",
+            avatar_cdn: "",
+            pageSize: 15
+    });
+    if(window.location.hash){
+          var checkExist = setInterval(function() {
+            if (document.getElementById(window.location.hash.replace("#",""))) {
+              location.href = window.location.hash;
+              clearInterval(checkExist);
+            }
+          }, 250);
+        }
+</script>
 
-    
+  </section>
+ 
+
+
 
 
           </div>
@@ -395,8 +449,8 @@ var _hmt = _hmt || [];
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
