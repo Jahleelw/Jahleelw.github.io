@@ -9,7 +9,7 @@
   <title>傻瓜式的LinuxU盘自动挂载-C语言 | 夜里的狸猫</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="能work就行目的很简单，插上U盘后能自动挂载，但加点小要求：第一，挂载的目录要在&#x2F;media上。第二，挂载的目录名要和系统识别U盘的名字一样。比如，我有一个三个区的U盘，怼入后fdisk -l看一下看到它为&#x2F;dev&#x2F;sdb1\2\3，那么正常来讲，它应该挂载到&#x2F;media&#x2F;sdb1\2\3目录。 那基于这个目标，撸起袖子干。本来linux内置udev服务可以完美解决。但参考一堆教程配置来配置去有">
-<meta name="keywords" content="linux,技术,C">
+<meta name="keywords" content="技术,linux,C">
 <meta property="og:type" content="article">
 <meta property="og:title" content="傻瓜式的LinuxU盘自动挂载-C语言">
 <meta property="og:url" content="https:&#x2F;&#x2F;nightcivet.live&#x2F;2019&#x2F;12&#x2F;02&#x2F;%E5%82%BB%E7%93%9C%E5%BC%8F%E7%9A%84LinuxU%E7%9B%98%E8%87%AA%E5%8A%A8%E6%8C%82%E8%BD%BD-C%E8%AF%AD%E8%A8%80&#x2F;index.html">
@@ -25,7 +25,7 @@
 <meta property="og:image" content="https:&#x2F;&#x2F;nightcivet.live&#x2F;2019&#x2F;12&#x2F;02&#x2F;%E5%82%BB%E7%93%9C%E5%BC%8F%E7%9A%84LinuxU%E7%9B%98%E8%87%AA%E5%8A%A8%E6%8C%82%E8%BD%BD-C%E8%AF%AD%E8%A8%80&#x2F;data_pic_4.png">
 <meta property="og:image" content="https:&#x2F;&#x2F;nightcivet.live&#x2F;2019&#x2F;12&#x2F;02&#x2F;%E5%82%BB%E7%93%9C%E5%BC%8F%E7%9A%84LinuxU%E7%9B%98%E8%87%AA%E5%8A%A8%E6%8C%82%E8%BD%BD-C%E8%AF%AD%E8%A8%80&#x2F;data_pic_5.png">
 <meta property="og:image" content="https:&#x2F;&#x2F;nightcivet.live&#x2F;2019&#x2F;12&#x2F;02&#x2F;%E5%82%BB%E7%93%9C%E5%BC%8F%E7%9A%84LinuxU%E7%9B%98%E8%87%AA%E5%8A%A8%E6%8C%82%E8%BD%BD-C%E8%AF%AD%E8%A8%80&#x2F;automount_cost.png">
-<meta property="og:updated_time" content="2019-12-03T03:36:16.003Z">
+<meta property="og:updated_time" content="2019-12-10T07:23:08.472Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https:&#x2F;&#x2F;nightcivet.live&#x2F;2019&#x2F;12&#x2F;02&#x2F;%E5%82%BB%E7%93%9C%E5%BC%8F%E7%9A%84LinuxU%E7%9B%98%E8%87%AA%E5%8A%A8%E6%8C%82%E8%BD%BD-C%E8%AF%AD%E8%A8%80&#x2F;amount_pic_1.jpg">
   
@@ -82,7 +82,7 @@ var _hmt = _hmt || [];
 			<img src="/img/cat.jpg" class="js-avatar">
 		</a>
 		<hgroup>
-		  <h1 class="header-author"><a href="/">jal</a></h1>
+		  <h1 class="header-author"><a href="/">纯黑色</a></h1>
 		</hgroup>
 		
 		<p class="header-subtitle">black eyes</p>
@@ -140,7 +140,7 @@ var _hmt = _hmt || [];
 				<img src="/img/cat.jpg" class="js-avatar">
 			</div>
 			<hgroup>
-			  <h1 class="header-author js-header-author">jal</h1>
+			  <h1 class="header-author js-header-author">纯黑色</h1>
 			</hgroup>
 			
 			<p class="header-subtitle"><i class="icon icon-quo-left"></i>black eyes<i class="icon icon-quo-right"></i></p>
@@ -221,7 +221,7 @@ var _hmt = _hmt || [];
 <li>查看系统硬盘状态，并得到相应数据；</li>
 <li>生成硬盘信息数据结构，同步挂载卸载；</li>
 </ol>
-<p>流程控制，简单的采用while(1)和sleep控制，采用数据对比每番进行判断；<br>硬盘状态，在/proc/partitions可以读取，再加个wc -l细化处理可以简单得到当前硬盘数；<br>数据结构，由于每个硬盘可能有几个区，而代表每个区的是字符串结构，符合这种直接用二位数组，再由于顺序没有特别的重要，善用字符串比较和下标就行，所以总的来说算是一个比较离散的二维数组吧。</p>
+<p>流程控制，简单的采用while(1)和sleep控制，采用数据对比每番进行判断；<br>硬盘状态，在/proc/partitions可以读取，再加个wc -l细化处理可以简单得到当前硬盘数；<br>数据结构，由于每个硬盘可能有几个区，而代表每个区的是字符串结构，符合这种直接用二维数组，再由于顺序没有特别的重要，善用字符串比较和下标就行，所以总的来说算是一个比较离散的二维数组吧。</p>
 <p>上流程图：</p>
 <div align="center">
 
@@ -301,11 +301,11 @@ var _hmt = _hmt || [];
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag article-tag-list-link color1">linux</a>
+        			<a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag article-tag-list-link color3">技术</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag article-tag-list-link color3">技术</a>
+        			<a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag article-tag-list-link color1">linux</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
@@ -483,7 +483,7 @@ var _hmt = _hmt || [];
   <div class="outer">
     <div id="footer-info">
     	<div class="footer-left">
-    		&copy; 2019 jal
+    		&copy; 2019 纯黑色
     	</div>
       	<div class="footer-right">
       		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
@@ -570,18 +570,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color1">linux</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color3">编译</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color5">mips</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color4">树莓派</a>
               </li>
              
@@ -591,6 +579,18 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color5">hexo</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color1">linux</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color3">编译</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color5">mips</a>
               </li>
              
               <li class="article-tag-list-item">
