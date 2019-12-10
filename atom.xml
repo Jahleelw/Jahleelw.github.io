@@ -57,13 +57,13 @@
     
     
     
-      <category term="技术" scheme="https://nightcivet.live/tags/%E6%8A%80%E6%9C%AF/"/>
-    
       <category term="linux" scheme="https://nightcivet.live/tags/linux/"/>
     
       <category term="编译" scheme="https://nightcivet.live/tags/%E7%BC%96%E8%AF%91/"/>
     
       <category term="mips" scheme="https://nightcivet.live/tags/mips/"/>
+    
+      <category term="技术" scheme="https://nightcivet.live/tags/%E6%8A%80%E6%9C%AF/"/>
     
   </entry>
   
@@ -86,9 +86,9 @@
     
     
     
-      <category term="技术" scheme="https://nightcivet.live/tags/%E6%8A%80%E6%9C%AF/"/>
-    
       <category term="linux" scheme="https://nightcivet.live/tags/linux/"/>
+    
+      <category term="技术" scheme="https://nightcivet.live/tags/%E6%8A%80%E6%9C%AF/"/>
     
       <category term="C" scheme="https://nightcivet.live/tags/C/"/>
     
@@ -114,9 +114,9 @@
     
     
     
-      <category term="树莓派" scheme="https://nightcivet.live/tags/%E6%A0%91%E8%8E%93%E6%B4%BE/"/>
-    
       <category term="技术" scheme="https://nightcivet.live/tags/%E6%8A%80%E6%9C%AF/"/>
+    
+      <category term="树莓派" scheme="https://nightcivet.live/tags/%E6%A0%91%E8%8E%93%E6%B4%BE/"/>
     
       <category term="hexo" scheme="https://nightcivet.live/tags/hexo/"/>
     
@@ -129,7 +129,7 @@
     <published>2019-11-27T01:20:01.000Z</published>
     <updated>2019-11-28T02:54:07.291Z</updated>
     
-    <content type="html"><![CDATA[<div id="hexo-blog-encrypt" data-wpm="Oh, this is an invalid password. Check and try again, please." data-whm="OOPS, these decrypted content may changed, but you can still have a look.">  <div class="hbe-input-container">  <input type="password" id="hbePass" placeholder="Hey, password is required here.">    <label for="hbePass">Hey, password is required here.</label>    <div class="bottom-line"></div>  </div>  <script id="hbeData" type="hbeData" data-hmacdigest="7b73a1dab6bed8ef163aa872e461e11316b3f223ee265455928e22647a9957ec">b31e22a21472225c8a0a855f3e97ce9495f34f984deb7bbb51c1b2292eb303fa83d842ef848a1afe786c0e95da05ec91b370efc0dc4121f58e6ace6d1d9a0879cd9a897a7e08f3a1a9e202ad35052c50</script></div><script src="/lib/blog-encrypt.js"></script><link href="/css/blog-encrypt.css" rel="stylesheet" type="text/css">]]></content>
+    <content type="html"><![CDATA[<div id="hexo-blog-encrypt" data-wpm="Oh, this is an invalid password. Check and try again, please." data-whm="OOPS, these decrypted content may changed, but you can still have a look.">  <div class="hbe-input-container">  <input type="password" id="hbePass" placeholder="Hey, password is required here." />    <label for="hbePass">Hey, password is required here.</label>    <div class="bottom-line"></div>  </div>  <script id="hbeData" type="hbeData" data-hmacdigest="7b73a1dab6bed8ef163aa872e461e11316b3f223ee265455928e22647a9957ec">b31e22a21472225c8a0a855f3e97ce9495f34f984deb7bbb51c1b2292eb303fa83d842ef848a1afe786c0e95da05ec91b370efc0dc4121f58e6ace6d1d9a0879cd9a897a7e08f3a1a9e202ad35052c50</script></div><script src="/lib/blog-encrypt.js"></script><link href="/css/blog-encrypt.css" rel="stylesheet" type="text/css">]]></content>
     
     <summary type="html">
     
